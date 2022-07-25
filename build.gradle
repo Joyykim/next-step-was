@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'webserver.WebServer'
+
+group 'com.joy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testRuntimeOnly 'junit:junit:4.11'
+    implementation 'com.google.guava:guava:18.0'
+    implementation 'ch.qos.logback:logback-classic:1.1.2'
+}
+
+test {
+    useJUnitPlatform()
+}
